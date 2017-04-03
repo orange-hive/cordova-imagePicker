@@ -174,7 +174,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
         updateAcceptButton();
         progress = new ProgressDialog(this);
         progress.setTitle("Processing images");
-        progress.setMessage("This may take a few moments");
+        progress.setMessage("Please wait...");
     }
     
     @Override
@@ -189,7 +189,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
         if (maxImages == 0 && isChecked) {
             isChecked = false;
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Maximum " + maxImageCount + " Photos");
+            builder.setTitle("Maximum " + maxImageCount + " photos");
             builder.setMessage("You can only select " + maxImageCount + " photos at a time.");
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) { 
